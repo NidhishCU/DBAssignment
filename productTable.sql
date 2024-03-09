@@ -49,4 +49,16 @@ CREATE TABLE Product (
     FOREIGN KEY (discount_id) REFERENCES Discount(id)
 );
 
+ALTER TABLE Product
+ADD CONSTRAINT fk_product_category
+FOREIGN KEY (category_id) REFERENCES Product_Category(id);
+
+ALTER TABLE Product
+ADD CONSTRAINT f_product_category
+FOREIGN KEY (category_id) REFERENCES Product_Category(id)
+ON DELETE RESTRICT
+ON UPDATE CASCADE;
+
+
+
 
