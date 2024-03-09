@@ -45,13 +45,13 @@ FOREIGN KEY (category_id) REFERENCES Product_Category(id);
 - ON DELETE RESTRICT: Prevent deletion of categories that have associated products.
 - ON UPDATE CASCADE: Update the category id in the "Product" table if the id of the corresponding category in the "Product_Category" table is updated.
 
-sql
+```sql
 ALTER TABLE Product
 ADD CONSTRAINT fk_product_category
 FOREIGN KEY (category_id) REFERENCES Product_Category(id)
 ON DELETE RESTRICT
 ON UPDATE CASCADE;
-
+```
 
 ## 3.  Insert Data Carefully
 
