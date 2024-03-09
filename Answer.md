@@ -34,10 +34,11 @@ To ensure that each product in the "Product" table has a valid category assigned
 
 Make sure the `category_id` column in the "Product" table references the `id` column in the "Product_Category" table.
 
- sql
+ ```sql
 ALTER TABLE Product
 ADD CONSTRAINT fk_product_category
 FOREIGN KEY (category_id) REFERENCES Product_Category(id);
+```
 
 ## 2. Use Foreign Key Constraint Options
 
